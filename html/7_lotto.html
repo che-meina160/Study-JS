@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>로또추첨기</title>
+</head>
+
+<body>
+  <h1>로또(당신의 행운을 빌어요❤)</h1>
+  <div class="rule">
+    <p>具体中奖设定如下：</p>
+    <ul>
+      <li>一等奖：投注号码与当期开奖号码中<span>6个基本号码完全相同</span>（顺序不限，下同）；</li>
+      <li> 二等奖：投注号码与当期开奖号码中<span>任意5个基本号码及特别号码相同</span>；</li>
+      <li>三等奖：投注号码与当期开奖号码中<span>任意5个基本号码相同</span>；</li>
+      <li>四等奖：投注号码与当期开奖号码中<span>任意4个基本号码及特别号码相同</span>；</li>
+      <li>五等奖：投注号码与当期开奖号码中<span>任意4个基本号码相同</span>；</li>
+      <li>六等奖：投注号码与当期开奖号码中<span>任意3个基本号码及特别号码相同</span>；</li>
+      <li>七等奖：投注号码与开奖号码中<span>任意3个基本号码相同</span>。</li>
+    </ul>
+  </div>
+  <p class="red">생각하신 로또번호를 선택해 주세요.（请选择你所想选的彩票号码）</p>
+  <table cellspacing="0">
+    <tr>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">1</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">2</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">3</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">4</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">5</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">6</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">7</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">8</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">9</a></td>
+    </tr>
+    <tr>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">10</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">11</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">12</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">13</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">14</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">15</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">16</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">17</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">18</a></td>
+    </tr>
+    <tr>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">19</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">20</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">21</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">22</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">23</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">24</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">25</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">26</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">27</a></td>
+    </tr>
+    <tr>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">28</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">29</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">30</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">31</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">32</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">33</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">34</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">35</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">36</a></td>
+    </tr>
+    <tr>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">37</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">38</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">39</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">40</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">41</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">42</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">43</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">44</a></td>
+      <td><a href="javascript:void(0)" onclick="inputEvent(this)">45</a></td>
+    </tr>
+  </table>
+  <form>
+    <input type="text" id="input_num" value="">
+    <button>확인!</button>
+  </form>
+  <h1>로또 추천기（彩票中奖号码）</h1>
+  <p>당첨숫자（基本号码）</p>
+  <div id="결과창"></div>
+  <p>보너스 숫자（特别号码）</p>
+  <div class="보너스"></div>
+  <script src="../js/lotto.js"></script>
+</body>
+<p id="pop_result"></p>
+<style>
+  #pop_result {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: tomato;
+    left: 50%;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 99;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 420px;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .rule {
+    width: 600px;
+    height: auto;
+    border: 1px solid pink;
+  }
+
+  .rule p {
+    margin-left: 15px;
+    font-weight: bold;
+  }
+
+  .rule li {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .rule span {
+    color: pink;
+  }
+
+  input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  button {
+    height: 36px;
+    font-size: 15px;
+  }
+
+  table {
+    width: 300px;
+    height: 150px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  td {
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  td a:hover {
+    color: red;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .red {
+    color: red;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  input {
+    color: #000000;
+    font-size: 16px;
+  }
+
+  body {
+    position: relative;
+    min-width: 1300px;
+  }
+</style>
+
+</html>

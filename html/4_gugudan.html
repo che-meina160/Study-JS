@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>구구단</title>
+  <!-- <script>
+    while (true) {
+      var 숫자1 = Math.floor(Math.random() * 9) + 1;
+      var 숫자2 = Math.floor(Math.random() * 9) + 1;
+      var 결과 = 숫자1 * 숫자2;
+      var 조건 = true;
+      while (조건) {
+        var 입력 = prompt(String(숫자1) + '곱하기' + String(숫자2) + '는?');
+        if (Number(입력) === 결과) {
+          alert('딩동댕!');
+          조건 = false;
+        } else {
+          alert('땡!');
+        }
+      }
+    }
+  </script> -->
+  <style>
+    button {
+      margin-left: 10px;
+      color: white;
+      background-color: black;
+      border: none;
+      padding: 5px 10px
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var 타이틀 = document.createElement('h1');
+    타이틀.textContent = '구구단';
+    document.body.append(타이틀);
+    var 내용 = document.createElement('p');
+    var 숫자1 = Math.ceil(Math.random() * 9) + 1;
+    var 숫자2 = Math.ceil(Math.random() * 9) + 1;
+    내용.textContent = 숫자1 + '곱하기' + 숫자2 + '는?';
+    document.body.append(내용);
+    var 폼 = document.createElement('form');
+    document.body.append(폼);
+    var 입력창 = document.createElement('input');
+    입력창.type = 'number';
+    폼.append(입력창);
+    var 버튼 = document.createElement('button');
+    버튼.textContent = '입력';
+    폼.append(버튼);
+    var 결과 = document.createElement('p');
+    document.body.append(결과);
+    var result = 숫자1 * 숫자2;
+    버튼.addEventListener('click', function 콜백함수(e) {
+      e.preventDefault();
+
+      if (result === Number(입력창.value)) {
+        // 결과.textContent = '딩동댕!';
+        결과.style =
+          'background: url(../img/right.png) no-repeat no-repeat;background-size: 100%;height: 195px;width: 195px';
+        숫자1 = Math.ceil(Math.random() * 9) + 1;
+        숫자2 = Math.ceil(Math.random() * 9) + 1;
+        result = 숫자1 * 숫자2;
+        내용.textContent = 숫자1 + '곱하기' + 숫자2 + '는?';
+        입력창.value = '';
+        입력창.focus();
+
+      } else {
+        // 결과.textContent = '땡!';
+        결과.style =
+          'background: url(../img/wrong.png) no-repeat no-repeat;background-size: 100%;height: 195px;width: 195px';
+        입력창.value = '';
+        입력창.focus();
+      }
+    })
+  </script>
+
+
+  <!-- <p>구구단</p>
+  <p></p>
+  <form>
+    <input type="number">
+    <button>입력</button>
+  </form>
+  <p style="background: url('../img/right.png') no-repeat no-repeat;background-size: 100%;height: 195px;width: 195px">
+  </p> -->
+</body>
+
+</html>
